@@ -1,22 +1,24 @@
-html{height: 100%;}
-*{
+html, body {
+    height: 30%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
 
 
-header{
-    width: 100%;
+header {
     height: 50%;
     background-color: rgba(177, 178, 181, 1);
     position: relative;
-    margin: 0px;
     display: flex;
     padding: 25px;
     align-items: center;
     justify-content: center;
-    margin-top: 0px;
-
     color: #BF6A6A;
     text-align: center;
     font-family: JejuMyeongjo;
@@ -26,49 +28,30 @@ header{
     line-height: normal;
 }
 
-
+main{
+    flex: 1;
+}
 body{
     background: #F0F0F0;
 }
-.contenedorFlex{
+.contenedorFlex {
     display: flex;
     justify-content: space-around;
-}
-@media (max-width: 700px){
-    .contenedorFlex{
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
-    }
-    #FotoPersonal{
-        text-align: center;
-        display: flex;
-        align-items: center;
-        margin: auto;
-    }
-    #DatosPersonales{
-        padding: 0;
-        width: fit-content;
-        margin: 30px;
-    }
-    header{
-        flex-direction: column;
-        justify-content: center;
-        width: fit-content;
-    }
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
 }
 #FotoPersonal{
-    width: 50%;
-    height: auto;
+    width: 40%;
     padding: 2%;
 }
 #FotoCarnet{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 100%;
     border-radius: 20px;
 }
 #DatosPersonales{
-    width: 100%;;
+    width: 90%;
     padding: 3%;
 
     color: #000;
@@ -80,11 +63,9 @@ body{
 }
 
 footer {
-    width: 100%;
     height: 30px;
     background-color: rgba(177, 178, 181, 1);
     position: relative;
-    bottom: 0;
     margin: 0px;
     display: flex;
     padding: 20px;
@@ -95,4 +76,28 @@ footer img{
     max-width: 10%;
     height: auto;
     padding: 20px;
+}
+@media (max-width: 700px) {
+    .contenedorFlex {
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        align-items: center;
+    }
+    #FotoPersonal {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: 80%;
+    }
+    #DatosPersonales {
+        padding: 0;
+        width: 80%;
+        margin: 30px auto;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
